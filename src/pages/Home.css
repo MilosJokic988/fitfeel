@@ -1,0 +1,65 @@
+
+
+
+/* Animacija pozadine */
+@keyframes pulseBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.home-background {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #2ecc71, #27ae60, #2ecc71);
+  background-size: 400% 400%;
+  animation: pulseBackground 12s ease infinite;
+  color: white;
+  padding: 0 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4.5rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button {
+  margin-top: 2.5rem;
+  padding: 14px 38px;
+  background-color: white;
+  color: #27ae60;
+  border: 2px solid white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: #27ae60;
+  color: white;
+  transform: scale(1.07);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}

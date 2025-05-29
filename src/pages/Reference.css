@@ -1,0 +1,84 @@
+.program-container {
+  padding: 60px 20px;
+  background: #f4fff8;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  animation: fadeIn 1.2s ease;
+}
+
+.program-title {
+  text-align: center;
+  font-size: 3.2rem;
+  color: #2ecc71;
+  margin-bottom: 50px;
+}
+
+.program-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.program-card {
+  background: white;
+  border-left: 6px solid #27ae60;
+  border-radius: 16px;
+  padding: 30px;
+  width: 320px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+}
+
+.program-card h2 {
+  color: #27ae60;
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+}
+
+.program-card p {
+  color: #333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.program-info {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Animacija */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .program-card {
+    width: 100%;
+  }
+
+  .program-title {
+    font-size: 2.4rem;
+  }
+}
+.program-info span:last-child {
+  color: #2ecc71;
+  font-weight: 600;
+}

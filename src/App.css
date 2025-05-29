@@ -1,0 +1,136 @@
+#root {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  background-color: #000; /* Primer: crna pozadina za mračan stil */
+  color: #fff; /* Bela slova */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+   /* Sprečava horizontalno skrolovanje */
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 40px; /* visina headera */
+  padding-bottom: 40px; /* visina footera */
+}
+
+main {
+  flex-grow: 1;
+}
+
+main {
+  padding-top: 100px; /* Dodaj razmak prema vrhu ako je header fiksiran */
+  flex-grow: 1;
+}
+
+
+/* Glavni header */
+.pro-header {
+  width: 100%;
+  background-color: white;
+  color: #27ae60;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #27ae60;
+}
+
+/* Navigacija */
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #2ecc71;
+}
+
+/* Hamburger meni */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #27ae60;
+  transition: 0.3s;
+}
+
+/* Animacija hamburgera */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Responsive meni */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 0;
+    display: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.1rem;
+  }
+}
