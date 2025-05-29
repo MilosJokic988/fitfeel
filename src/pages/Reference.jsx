@@ -10,7 +10,7 @@ const programs = [
     price: '4.999 RSD'
   },
   {
-    title: 'ZdravLeđa',
+    title: 'ZdravaLeđa',
     description: 'Specijalizovani program za jačanje leđa, ispravljanje držanja i ublažavanje bolova. Fokusiran na pravilne pokrete i stabilnost tela.',
     duration: '4 nedelje',
     intensity: 'Nizak do srednji',
