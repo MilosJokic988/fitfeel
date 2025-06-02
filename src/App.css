@@ -1,37 +1,21 @@
-#root {
+html, body, #root, .main-layout {
+  margin: 0;
+  padding: 0;
   width: 100vw;
-  min-height: 100vh;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  background-color: #000; /* Primer: crna pozadina za mračan stil */
-  color: #fff; /* Bela slova */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  /* OBRATI PAŽNJU: ne stavljaj max-width/max-height jer mogu da ograniče */
 }
 
-html, body {
-  
+main {
+  flex-grow: 1;
   margin: 0;
-  padding: 0;
+ padding: 0 0 40px 0;/* ukloni levo i desno padding */ /* možeš smanjiti ako želiš više mesta */
+  width: 100%;
   height: 100%;
-   /* Sprečava horizontalno skrolovanje */
-}
-
-.main-layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  padding-top: 40px; /* visina headera */
-  padding-bottom: 40px; /* visina footera */
-}
-
-main {
-  flex-grow: 1;
-}
-
-main {
-  padding-top: 100px; /* Dodaj razmak prema vrhu ako je header fiksiran */
-  flex-grow: 1;
+  box-sizing: border-box;
+  background-color: transparent;
 }
 
 

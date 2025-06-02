@@ -1,57 +1,98 @@
 .about-container {
-  padding: 60px 20px;
   background: linear-gradient(135deg, #eafaf1, #c8f7dc);
   min-height: 100vh;
-  text-align: center;
-  animation: fadeIn 1.5s ease;
+  padding: 40px 15px 60px; /* smanjen gornji padding sa 80px na 40px */
   font-family: 'Poppins', sans-serif;
+  text-align: center;
 }
 
 .about-title {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: #27ae60;
-  margin-bottom: 40px;
-  text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  margin-bottom: 100px; /* povećana margina sa 40px na 60px za bolji razmak ispod naslova */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  animation: titleFadeIn 1.2s ease;
 }
 
-.about-content {
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* kartice manje */
+  gap: 20px; /* manji gap */
+  justify-items: center;
+  width: 100%;
+}
+
+.about-card {
+  background-color: white;
+  border-radius: 14px; /* malo manji radius */
+  padding: 18px; /* manji padding */
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06); /* lagano manja senka */
+  width: 100%;
+  max-width: 260px; /* manja širina kartice */
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.about-box {
-  background-color: white;
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  
 }
 
-.about-box:hover {
-  transform: scale(1.03);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+.about-card:hover {
+  transform: scale(1.02); /* manje povećanje */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
 
-.about-box h2 {
-  font-size: 2rem;
+.about-icon {
+  font-size: 2rem; /* smanjeno sa 2.5rem */
   color: #27ae60;
-  margin-bottom: 15px;
+  margin-bottom: 12px; /* manje margine */
 }
 
-.about-box p {
-  font-size: 1.2rem;
+.about-card h2 {
+  font-size: 1.3rem; /* smanjeno sa 1.6rem */
+  color: #27ae60;
+  margin-bottom: 8px;
+}
+
+.about-card p {
+  font-size: 0.9rem; /* smanjeno sa 1.05rem */
   color: #333;
-  line-height: 1.7;
+  line-height: 1.5;
+  margin-bottom: 8px;
 }
 
-/* Animacija ulaska */
-@keyframes fadeIn {
+.about-card ul {
+  padding-left: 18px;
+  margin-top: 0;
+  list-style: disc;
+  color: #333;
+}
+
+.location-button {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 8px 16px; /* manji padding */
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 0.9rem; /* smanjeno sa 1rem */
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.location-button:hover {
+  background-color: #219150;
+}
+
+@keyframes titleFadeIn {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
@@ -62,14 +103,46 @@
 /* Responsive */
 @media (max-width: 768px) {
   .about-title {
-    font-size: 2.5rem;
+    font-size: 2rem; /* dodatno smanjeno na tabletima */
   }
 
-  .about-box h2 {
-    font-size: 1.5rem;
+  .about-card h2 {
+    font-size: 1.2rem;
   }
 
-  .about-box p {
+  .about-card p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 60px 10px 100px; /* povećan bottom padding sa 30px na 100px */
+  }
+
+  .about-grid {
+    gap: 12px;
+  }
+
+  .about-card {
+    padding: 14px;
+    max-width: 100%; /* na mobilnim zauzima celu širinu */
+  }
+
+  .about-card h2 {
     font-size: 1.1rem;
+  }
+
+  .about-card p {
+    font-size: 0.8rem;
+  }
+
+  .location-button {
+    padding: 7px 14px;
+    font-size: 0.8rem;
+  }
+
+  .about-icon {
+    font-size: 1.6rem;
   }
 }

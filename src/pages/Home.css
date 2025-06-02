@@ -13,9 +13,9 @@
     background-position: 0% 50%;
   }
 }
-
 .home-background {
-  height: 100vh;
+  min-height: 100vh;           /* minimalna visina jednaka visini ekrana */
+  height: auto;                /* dopušta da raste ako ima više sadržaja */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,8 +24,9 @@
   background-size: 400% 400%;
   animation: pulseBackground 12s ease infinite;
   color: white;
-  padding: 0 20px;
+  padding: 40px 20px;          /* dodajem vertikalni padding da ne lepi sadržaj uz ivice */
   text-align: center;
+  box-sizing: border-box;      /* da padding ne povećava širinu */
 }
 
 h1 {

@@ -1,59 +1,120 @@
 .program-container {
   padding: 60px 20px;
   background: #f4fff8;
-  min-height: 100vh;
   font-family: 'Poppins', sans-serif;
   animation: fadeIn 1.2s ease;
-}
-
-.program-title {
-  text-align: center;
-  font-size: 3.2rem;
-  color: #2ecc71;
-  margin-bottom: 50px;
+  min-height: 100vh;
+  
 }
 
 .program-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 16px; /* sa 30px na 15px */
 }
 
 .program-card {
   background: white;
   border-left: 6px solid #27ae60;
   border-radius: 16px;
-  padding: 30px;
-  width: 320px;
+  padding: 20px; /* sa 30px na 20px */
+  width: 310px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px; /* sa 30px na 20px */
+  transition: box-shadow 0.3s ease;
 }
 
 .program-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
 }
 
 .program-card h2 {
   color: #27ae60;
   font-size: 1.7rem;
-  margin-bottom: 15px;
+  margin-bottom: 8px; /* sa 10px na 8px */
 }
 
-.program-card p {
+.summary {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 10px; /* sa 15px na 10px */
+}
+
+.program-description-wrapper {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.program-description {
+  font-size: 0.95rem; /* ostavi isto i za kratki i za dugi tekst */
   color: #333;
-  font-size: 1.1rem;
   line-height: 1.6;
+  margin-bottom: 10px;
+  transition: max-height 0.4s ease;
+  overflow: hidden;
+}
+
+
+/* Dugme */
+.toggle-button {
+  background-color: transparent;
+  color: #27ae60;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: 0.95rem; /* manji font da ne dominira */
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #219150;
+}
+
+
+.program-description p,
+.program-description ul {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.program-description ul {
+  padding-left: 20px;
+}
+
+.program-description ul li {
+  list-style-type: disc;
+  margin-bottom: 5px;
+}
+
+.toggle-button {
+  background-color: transparent;
+  color: #27ae60;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.toggle-button:hover {
+  color: #219150;
 }
 
 .program-info {
-  margin-top: 20px;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: #555;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 3px;
+}
+
+.program-info span strong {
+  color: #000;
 }
 
 /* Animacija */
@@ -70,15 +131,42 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .program-card {
-    width: 100%;
+  .program-list {
+    gap: 10px; /* manji gap na tablet/srednjim ekranima */
   }
 
-  .program-title {
-    font-size: 2.4rem;
+  .program-card {
+    width: 100%;
+    padding: 20px;
   }
 }
-.program-info span:last-child {
-  color: #2ecc71;
-  font-weight: 600;
+
+@media (max-width: 480px) {
+  .program-container {
+    padding: 20px 10px;
+    margin-top: 20px;
+  }
+
+  .program-list {
+    gap: 4px;
+  }
+
+  .program-card {
+    padding: 14px;
+    margin-bottom: 12px;
+  }
+
+  .program-card h2 {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  .toggle-button {
+    font-size: 0.85rem;
+  }
+
+  .program-info {
+    font-size: 0.85rem;
+  }
 }
+
