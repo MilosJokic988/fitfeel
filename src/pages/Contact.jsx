@@ -11,15 +11,15 @@ const Contact = () => {
         <div className="contact-info">
           <div>
             <h4>Email</h4>
-            <p>office@fittfeel.rs</p>
+            <p>feelfitbg@gmail.com</p>
           </div>
           <div>
             <h4>Telefon</h4>
-            <p>+381 11 123 456</p>
+            <p>0659999644</p>
           </div>
           <div>
             <h4>Adresa</h4>
-            <p>Vojvode Stepe 123, Beograd</p>
+            <p>Maksima Gorkog 78, Beograd</p>
           </div>
         </div>
 

@@ -30,6 +30,7 @@ const Header = () => {
           <Link to="/" onClick={() => setMenuOpen(false)}>Početna</Link>
           <Link to="/about" onClick={() => setMenuOpen(false)}>O nama</Link>
           <Link to="/reference" onClick={() => setMenuOpen(false)}>Program</Link>
+          <Link to="/gallery" onClick={() => setMenuOpen(false)}>Galerija</Link>
           <Link to="/contact" onClick={() => setMenuOpen(false)}>Kontakt</Link>
         </nav>
       </div>
